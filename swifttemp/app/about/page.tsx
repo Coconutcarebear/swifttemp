@@ -32,7 +32,7 @@ export default function About() {
       <section className="hero compact">
         <div className="u" style={{ display: 'block' }}>
           <span className="eyebrow">About</span>
-          <h1>Licensed, insured, and on our own payroll</h1>
+          <h1>Built to show up</h1>
           <p className="lede">
             [Origin story goes here — specific, dated, and local. When the company started,
             what the founder did before, and why it exists. Two or three paragraphs, written

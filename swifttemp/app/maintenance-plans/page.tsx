@@ -2,6 +2,17 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { site } from '@/lib/site';
 
+/**
+ * Revalidated hourly so the headline month stays current without making the
+ * page dynamic. Rendered in America/New_York so it flips at local midnight,
+ * not UTC.
+ */
+export const revalidate = 3600;
+
+const currentMonth = () =>
+  new Intl.DateTimeFormat('en-US', { month: 'long', timeZone: 'America/New_York' })
+    .format(new Date());
+
 export const metadata: Metadata = {
   title: 'HVAC Maintenance Plans',
   description:
@@ -22,7 +33,7 @@ export default function Plans() {
       <section className="hero compact">
         <div className="u" style={{ display: 'block' }}>
           <span className="eyebrow">Maintenance plans</span>
-          <h1>Stop finding out in August</h1>
+          <h1>Stop finding out in {currentMonth()}</h1>
           <p className="lede">
             Most systems don&rsquo;t fail suddenly. They fail on the first genuinely hot day, after
             a year of nobody looking at them.
@@ -73,8 +84,8 @@ export default function Plans() {
         <div className="u narrow">
           <div className="sec-head"><span className="eyebrow">The visit</span><h2>What a tune-up actually covers</h2></div>
           <div className="faq">
-            <details><summary>Cooling season</summary><div className="a">[Refrigerant charge, coil condition, capacitor test, amp draw, condensate drain, filter, thermostat calibration, electrical connections.]</div></details>
-            <details><summary>Heating season</summary><div className="a">[Heat exchanger inspection, combustion analysis, flame sensor, ignition, gas pressure, blower, safety controls, CO test.]</div></details>
+            <details><summary>Cooling season</summary><div className="a">Refrigerant charge, coil condition, capacitor test, amp draw, condensate drain, filter, thermostat calibration, and electrical connections.</div></details>
+            <details><summary>Heating season</summary><div className="a">Heat exchanger inspection, combustion analysis, flame sensor, ignition, gas pressure, blower, safety controls, and a CO test.</div></details>
             <details><summary>What you get afterwards</summary><div className="a">A written condition report — what&rsquo;s fine, what&rsquo;s wearing, and what will need attention within a year. No verbal-only diagnoses.</div></details>
             <details><summary>Can I cancel?</summary><div className="a">Any time, no fee. We&rsquo;d rather you stay because it&rsquo;s worth it.</div></details>
           </div>

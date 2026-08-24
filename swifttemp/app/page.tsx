@@ -58,7 +58,7 @@ const techs = [
 
 const propertyTypes = [
   'Office + flex', 'Retail + restaurant', 'Multi-family', 'Warehouse + industrial',
-  'Houses of worship', 'Medical + dental', 'Schools + daycare', 'Property portfolios',
+  'Medical + dental', 'Schools + daycare', 'Property portfolios',
 ];
 
 export default function Home() {
@@ -211,9 +211,8 @@ export default function Home() {
               <span className="eyebrow on-dark">Commercial + light industrial</span>
               <h2>Your building doesn&rsquo;t get to have a bad day</h2>
               <p className="lede" style={{ color: 'rgba(232,245,255,.85)' }}>
-                Preventive maintenance contracts, emergency response, and equipment replacement
-                for [200]+ commercial properties across north Jersey. One account manager,
-                one number, [4]-hour emergency response.
+                Preventive maintenance contracts, emergency response, and equipment
+                replacement for commercial properties across New Jersey.
               </p>
               <div className="btnrow" style={{ marginTop: 26 }}>
                 <Link className="btn btn-primary" href="/contact?type=commercial">

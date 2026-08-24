@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   description:
     'Licensed HVAC for homes and businesses across north Jersey. Upfront pricing, no overtime charges, 24/7 emergency service.',
   openGraph: { type: 'website', siteName: site.name, locale: 'en_US' },
+  icons: {
+    icon: '/favicon-32.png',
+    apple: '/apple-touch-icon.png',
+  },
   robots: { index: true, follow: true },
 };
 

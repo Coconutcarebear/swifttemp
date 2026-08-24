@@ -11,11 +11,11 @@ export const site = {
   name: 'SwiftTemp Climate Solutions',
   shortName: 'SwiftTemp',
   tagline: 'Climate Solutions',
-  url: 'https://swifttemp.com',
+  url: 'https://swift-temp.com',
 
   phone: '(973) 000-0000',
   phoneHref: 'tel:+19730000000',
-  email: 'hello@swifttemp.com',
+  email: 'hello@swift-temp.com',
   address: {
     street: '[123 Main Street]',
     locality: '[Clifton]',
@@ -45,11 +45,12 @@ export const site = {
   },
 
   /**
-   * Only emitted in JSON-LD when `verified` is true. Fabricated ratings are a
-   * structured-data violation and can earn a manual action — leave this false
-   * until the numbers are pulled from the real Google Business Profile.
+   * No reviews yet. Leave `verified: false` — that suppresses aggregateRating
+   * in the JSON-LD and keeps every review module off the site. Flip it to true
+   * only once these numbers come from the real Google Business Profile;
+   * fabricated ratings are a structured-data violation.
    */
-  rating: { verified: false, value: '[4.9]', count: '[312]' },
+  rating: { verified: false, value: '', count: '' },
 
   areaServed: ['Bergen County', 'Passaic County', 'Essex County', 'Morris County'],
 } as const;

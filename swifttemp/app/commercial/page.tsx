@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const types = [
   'Office + flex', 'Retail + restaurant', 'Multi-family', 'Warehouse + light industrial',
-  'Houses of worship', 'Medical + dental', 'Schools + daycare', 'Property management portfolios',
+  'Medical + dental', 'Schools + daycare', 'Property management portfolios',
 ];
 
 const contracts = [
@@ -36,9 +36,8 @@ export default function Commercial() {
                 Your building doesn&rsquo;t get to have a bad day
               </h1>
               <p className="lede" style={{ color: 'rgba(232,245,255,.85)' }}>
-                Preventive maintenance contracts, emergency response, and equipment replacement
-                for [200]+ commercial properties across north Jersey. One account manager,
-                one number, [4]-hour emergency response.
+                Preventive maintenance contracts, emergency response, and equipment
+                replacement for commercial properties across New Jersey.
               </p>
               <div className="btnrow" style={{ marginTop: 26 }}>
                 <Link className="btn btn-primary btn-lg" href="/contact?type=commercial">
@@ -66,30 +65,6 @@ export default function Commercial() {
             {contracts.map((c) => (
               <div className="card" key={c.t}><h3>{c.t}</h3><p>{c.b}</p></div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Commercial buyers want insurance limits and a safety record, not star
-          ratings. Entirely different proof vocabulary from residential. */}
-      <section className="band tint">
-        <div className="u">
-          <div className="sec-head"><span className="eyebrow">Proof</span><h2>What you&rsquo;ll want to see</h2></div>
-          <div className="grid g2">
-            <div className="card">
-              <h3>Case studies</h3>
-              <p>
-                [Two at launch: property type, the problem, what we did, and a measurable
-                result — energy, downtime, or cost.]
-              </p>
-            </div>
-            <div className="card">
-              <h3>Credentials</h3>
-              <p>
-                [License, insurance limits, bonding, EPA certifications, manufacturer
-                authorizations, and safety record.]
-              </p>
-            </div>
           </div>
         </div>
       </section>

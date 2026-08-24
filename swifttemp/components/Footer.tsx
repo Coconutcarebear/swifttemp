@@ -8,8 +8,7 @@ export default function Footer() {
       <div className="u">
         <div className="fgrid">
           <div className="fbrand">
-            <span className="wm">Swift<em>Temp</em></span>
-            <span className="tl">{site.tagline}</span>
+            <img src="/logo-stacked-light.png" alt={site.name} width={478} height={449} />
             <p style={{ marginTop: 18, fontSize: 14, lineHeight: 1.65 }}>
               Licensed HVAC for homes and businesses across north Jersey. Upfront pricing,
               no overtime charges.
